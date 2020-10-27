@@ -1,0 +1,25 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+block variables
+	- let  mainPage= 'bg-wrap body-start'
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+	+pic('bg','bg')(class="picture-bg")
+	img.logo-center(src="img/svg/logo-center.svg", alt="")
+	
+	//- +mob-mnu()
+	//- +header()
+	//- +top-nav()
+	//- +headerBlock()
+	//- +sForm()
+	//- +sContact()
+	//- +footer()
+
+
+	

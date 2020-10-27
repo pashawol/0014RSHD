@@ -1,0 +1,16 @@
+mixin item-sos(icon, a='#')
+	+e.A.item(href= a target="_blank")
+		+pic(`soc-${icon}.png`) 
+mixin soc()
+	+b.soc.panel
+		if block
+			block
+		else
+			+item-sos(1) 
+			+item-sos(2) 
+			+item-sos(3) 
+			+item-sos(4) 
+			+item-sos(5) 
+			+item-sos(6) 
+
+//- /social buttons 

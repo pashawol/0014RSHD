@@ -1,0 +1,21 @@
+mixin topLine()
+	// start topLine
+	+b.topLine#topLine&attributes(attributes)
+		.container 
+			.row
+				.col
+					+b.search-block
+						button
+							img(src="img/@2x/search.png", alt="")
+						input(type="text")
+				.col-auto
+					+b.user-block
+						+e.toggle
+							img(src="img/@2x/user.png", alt="")
+						+e.dropdown
+							a(href="#") Вход
+							a(href="#") Регистрация
+				.col-lg-4.order-lg-first
+					a(href="/")
+						+pic('logo-text.png')
+	// end topLine

@@ -1,0 +1,19 @@
+mixin sCards(data)
+	// start sCards
+	+b.sCards.section#sCards&attributes(attributes)
+		.row
+			mixin item(i,t)
+				+e.col.col-3
+					+e.item(href="#")
+						+pic(`icon-i-${i}.png`)
+						+e.DIV.title= t
+				// /+e.col.col-3
+			+item('1','Проекты')
+			+item('2','Направления')
+			+item('3','Мероприятия')
+			+item('4','Новости')
+			+item('5','Об РДШ')
+			+item('6','Школы')
+			+item('7','Календарь')
+			+item('8','Контакты')
+	// end sCards

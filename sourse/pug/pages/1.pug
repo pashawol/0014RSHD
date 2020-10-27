@@ -1,0 +1,63 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCards/_sCards.pug
+
+block variables
+	- let  mainPage= 'bg-wrap'
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+	+pic('bg-def','bg')(class="picture-bg") 
+	+topLine() 
+	.container
+		.row
+			.col-xl-4
+				.aside
+					.row
+						.col-xl-12.col-md-6.col-4
+							+b.date-panel.panel
+								.row
+									.col-md-6
+										+e.day Понедельник
+										+e.date
+											+e.SPAN.number 22 
+											| ноября
+									.col-md-6.text-md-right
+										+e.day--blue Событие
+										p Текст в две строки  Текст в две строки
+						.col-xl-12.col-md-6.col-8
+							+b.card(href="#").panel.bg-wrap
+								+pic('kino-1', 'bg')(class="picture-bg")
+								+e.caption
+									+e.DIV.md Смотреть 
+									+e.DIV.text  Вышел трейлер JL Snyder Cut
+						.col-xl-12.col-md-6
+							+b.card(href="#").panel.bg-wrap
+								+pic('kino-2', 'bg')(class="picture-bg")
+								+e.caption
+									+e.DIV.text  Проект
+									+e.DIV.lg INTERES
+						.col-xl-12.col-md-6.d-none.d-md-block
+							+soc()
+			.col-xl-8
+				+sCards
+				.d-md-none
+					+soc()
+	//- +topLine() 
+	//- .container
+	//- 	.col-3
+	//- 	.col-9
+	//- +mob-mnu()
+	//- +header()
+	//- +top-nav()
+	//- +headerBlock()
+	//- +sForm()
+	//- +sContact()
+	//- +footer()
+
+
+	
